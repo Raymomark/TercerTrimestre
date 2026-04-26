@@ -1,0 +1,27 @@
+<template>
+    <section class="gallery-container">
+        <div class="gallery-header">
+            <p class="gallery-subtitle">Galería interactiva</p>
+            <h1>Explora imágenes destacadas</h1>
+            <p class="gallery-text">Selecciona una miniatura para cambiar la imagen principal de forma dinámica.</p>
+        </div>
+
+        <div class="main-card">
+            <img src={selectedImage.url} alt={selectedImage.title} class="main-image" />
+
+            <div class="main-info">
+                <h2>{selectedImage.title}</h2>
+                <p>{selectedImage.description}</p>
+            </div>
+        </div>
+
+        <div class="thumbnail-grid">
+            <template for:each={galleryImages} for:item="image">
+                <button key={image.id} class={image.cardClass} data-id={image.id} onclick={handleImageClick}>
+                    <img src={image.url} alt={image.title} class="thumbnail-image" />
+                    <span>{image.title}</span>
+                </button>
+            </template>
+        </div>
+    </section>
+</template>
