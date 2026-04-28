@@ -1,0 +1,13 @@
+<template>
+    <div class="timer-container">
+        <h2>Contador dinámico</h2>
+
+        <p class="time">{formattedTime}</p>
+
+        <div class="buttons">
+            <lightning-button label="Iniciar" variant="brand" onclick={handleStart}></lightning-button>
+            <lightning-button label="Pausar" onclick={handlePause}></lightning-button>
+            <lightning-button label="Reiniciar" variant="destructive" onclick={handleReset}></lightning-button>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,18 @@
+.timer-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 300px;
+    margin: auto;
+}
+
+.time {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.buttons lightning-button {
+    margin: 5px;
+}
