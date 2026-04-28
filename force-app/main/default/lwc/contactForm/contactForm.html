@@ -1,0 +1,36 @@
+<template>
+    <div class="form-container">
+        <h2>Formulario de Contacto</h2>
+
+        <lightning-input 
+            label="Nombre"
+            value={nombre}
+            onchange={handleNombreChange}
+            onblur={validateNombre}
+            required>
+        </lightning-input>
+
+        <lightning-input 
+            type="email"
+            label="Email"
+            value={email}
+            onchange={handleEmailChange}
+            onblur={validateEmail}
+            required>
+        </lightning-input>
+
+        <lightning-textarea 
+            label="Mensaje"
+            value={mensaje}
+            onchange={handleMensajeChange}
+            onblur={validateMensaje}
+            required>
+        </lightning-textarea>
+
+        <lightning-button 
+            label="Enviar"
+            variant="brand"
+            onclick={handleSubmit}>
+        </lightning-button>
+    </div>
+</template>
