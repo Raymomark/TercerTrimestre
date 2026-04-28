@@ -1,0 +1,18 @@
+<template>
+    <div class={containerClass}>
+        <h2>Detalle de Oportunidad</h2>
+
+        <template if:true={opportunity}>
+            <p><strong>Nombre:</strong> {name}</p>
+            <p><strong>Estado:</strong> {stage}</p>
+            <p><strong>Importe:</strong> {amount}</p>
+            <p><strong>Fecha cierre:</strong> {closeDate}</p>
+
+            <lightning-button label={buttonLabel} onclick={toggleTheme}></lightning-button>
+        </template>
+
+        <template if:false={opportunity}>
+            <p>Cargando oportunidad...</p>
+        </template>
+    </div>
+</template>
